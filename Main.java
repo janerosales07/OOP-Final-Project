@@ -106,8 +106,8 @@ public class Main {
         System.out.println("\n===== ADD PRODUCT =====");
 
         String name = readText("Product name: ");
-        double price = readDouble("Selling price: ₱", 0.01);
-        double cost = readDouble("Product cost: ₱", 0);
+        double price = readDouble("Selling price: PHP ", 0.01);
+        double cost = readDouble("Product cost: PHP ", 0);
         int stock = readInt("Initial stock: ", 0);
 
         Product.addProduct(name, price, cost, stock);
@@ -286,7 +286,6 @@ public class Main {
     // ==============================
 
     public static void main(String[] args) {
-
         Product.loadProducts();
         Event.loadEvents();
         Order.loadOrders();

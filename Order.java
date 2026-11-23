@@ -61,7 +61,7 @@ public class Order {
         System.out.println("Customer: " + customer);
         System.out.println("Product: " + product.name);
         System.out.println("Quantity: " + quantity);
-        System.out.println("Total payment: ₱" + total);
+        System.out.println("Total payment: PHP " + total);
         System.out.println("Pickup event: " + event.name);
         System.out.println("Pickup date: " + event.date);
         System.out.println("Pickup time: " + event.time);
@@ -84,7 +84,7 @@ public class Order {
             System.out.println((i + 1) + ". " + o.customer
                     + " | Product: " + o.productName
                     + " | Quantity: " + o.quantity
-                    + " | Total: ₱" + o.total
+                    + " | Total: PHP " + o.total
                     + " | Pickup: " + o.eventName
                     + " (" + o.eventDate + " " + o.eventTime + ")");
         }
@@ -92,7 +92,7 @@ public class Order {
 
     // Save orders to orders.txt
     public static void saveOrders() {
-        try (PrintWriter writer = new PrintWriter("orders.txt")) {
+        try (PrintWriter writer = new PrintWriter("orders.txt", java.nio.charset.StandardCharsets.UTF_8)) {
 
             for (Order o : orders) {
                 writer.println(o.customer + "|" + o.productName + "|"
@@ -116,7 +116,7 @@ public class Order {
             return;
         }
 
-        try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader(file, java.nio.charset.StandardCharsets.UTF_8))) {
             String line;
 
             while ((line = reader.readLine()) != null) {

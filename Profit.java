@@ -32,8 +32,8 @@ public class Profit {
         System.out.println("\n===== SALES & PROFIT REPORT =====");
 
         System.out.println("Total Orders: " + Order.orders.size());
-        System.out.printf("Total Sales: ₱%.2f%n", getTotalSales());
-        System.out.printf("Total Product Cost: ₱%.2f%n", getTotalCost());
-        System.out.printf("Total Profit: ₱%.2f%n", getProfit());
+        System.out.printf("Total Sales: PHP %.2f%n", getTotalSales());
+        System.out.printf("Total Product Cost: PHP %.2f%n", getTotalCost());
+        System.out.printf("Total Profit: PHP %.2f%n", getProfit());
     }
 }

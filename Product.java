@@ -40,8 +40,8 @@ public class Product {
             Product p = products.get(i);
 
             System.out.println((i + 1) + ". " + p.name
-                    + " | Price: " + p.price
-                    + " | Cost: " + p.cost
+                    + " | Price: PHP " + p.price
+                    + " | Cost: PHP " + p.cost
                     + " | Stock: " + p.stock);
         }
     }
