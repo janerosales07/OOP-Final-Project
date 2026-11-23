@@ -214,19 +214,6 @@ public static void viewReport() {
 ![Exit](screenshots/exit.png)
 *Exit message after choosing option 9.*
 
-### Input Validation and Error Messages
-![Invalid Input](screenshots/invalid-input.png)
-*Invalid number, empty text, or the `|` character being rejected.*
-
-![Invalid Date and Time](screenshots/invalid-date-time.png)
-*Wrong date format (`YYYY-MM-DD`) and wrong time format (`HH:MM`).*
-
-![Out of Stock](screenshots/out-of-stock.png)
-*"This product is out of stock" and "Not enough stock available" messages.*
-
-![No Products or Events](screenshots/no-products-events.png)
-*"Please add products first" and "Please schedule a selling event first" messages.*
-
 ---
 
 ## ┊ Known Limitations
