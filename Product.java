@@ -24,7 +24,7 @@ public class Product {
     public static void addProduct(String name, double price, double cost, int stock) {
         products.add(new Product(name, price, cost, stock));
         saveProducts();
-        System.out.println("Product added successfully!");
+        System.out.println("\nProduct added successfully!");
     }
 
     // Display all products
@@ -32,7 +32,7 @@ public class Product {
         System.out.println("\n===== PRODUCT LIST =====");
 
         if (products.isEmpty()) {
-            System.out.println("No products available.");
+            System.out.println("\nNo products available.");
             return;
         }
 
@@ -76,7 +76,7 @@ public class Product {
             }
 
         } catch (IOException e) {
-            System.out.println("Error saving products.");
+            System.out.println("\nError saving products.");
         }
     }
 
@@ -107,7 +107,7 @@ public class Product {
             }
 
         } catch (Exception e) {
-            System.out.println("Error loading products.");
+            System.out.println("\nError loading products.");
         }
     }
 }

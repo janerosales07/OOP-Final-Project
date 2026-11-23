@@ -66,7 +66,7 @@ public class Order {
         System.out.println("Pickup date: " + event.date);
         System.out.println("Pickup time: " + event.time);
         System.out.println("Pickup location: " + event.location);
-        System.out.println("Order saved successfully!");
+        System.out.println("\nOrder saved successfully!");
     }
 
     // Display all pre-orders
@@ -144,7 +144,7 @@ public class Order {
             }
 
         } catch (Exception e) {
-            System.out.println("Error loading orders.");
+            System.out.println("\nError loading orders.");
         }
     }
 }

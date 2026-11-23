@@ -1,1 +1,1 @@
-Jane|Brownies|5|175.0|100.0|Campus Sale|2026-12-02|12:00|School
+Jane|Cookies|30|1350.0|900.0|Light Up Thursday|2026-12-03|04:00|Spartan Gym
