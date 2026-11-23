@@ -173,45 +173,56 @@ public static void viewReport() {
 
 ### Main Menu
 ![Main Menu](screenshots/main-menu.png)
+
 *Welcome message and the 9-option main menu.*
 
 ### 1. Add Product
 ![Add Product](screenshots/add-product.png)
+
 *Entering the product name, selling price, cost, and initial stock.*
 
 ### 2. View Products
 ![View Products](screenshots/view-products.png)
+
 *Product list showing price, cost, and current stock.*
 
 ### 3. Restock Product
 ![Restock Product](screenshots/restock-product.png)
+
 *Choosing a product, entering the quantity to add, and seeing the new stock.*
 
 ### 4. Set Selling Event
 ![Set Selling Event](screenshots/set-event.png)
+
 *Entering the event name, date, time, and location.*
 
 ### 5. View Selling Events
 ![View Selling Events](screenshots/view-events.png)
+
 *List of scheduled events.*
 
 ### 6. Place Pre-order
 ![Place Pre-order](screenshots/place-order.png)
+
 *Choosing a product, entering the customer name and quantity, and selecting a pickup event.*
 
 ![Order Summary](screenshots/order-summary.png)
+
 *Order summary with total payment and pickup details.*
 
 ### 7. View Pre-orders
 ![View Pre-orders](screenshots/view-orders.png)
+
 *List of all pre-orders with customer, product, quantity, total, and pickup schedule.*
 
 ### 8. View Sales & Profit
 ![Sales and Profit Report](screenshots/profit-report.png)
+
 *Total orders, total sales, total product cost, and total profit.*
 
 ### 9. Exit
 ![Exit](screenshots/exit.png)
+
 *Exit message after choosing option 9.*
 
 ---
