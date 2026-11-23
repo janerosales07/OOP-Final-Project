@@ -136,27 +136,40 @@ public static void viewReport() {
 
 ## ┊ Instructions for Running the Program
 
-### Prerequisites
-* Java Development Kit (**JDK 8** or later) installed on your machine.
+### Requirements
 
-### Steps to Compile & Run
-1. Clone this repository:
-   ```bash
-   git clone [https://github.com/](https://github.com/)[your-username]/[your-repo-name].git
-   ```
-2. Open your terminal and navigate to the `src` folder:
-   ```bash
-   cd [your-repo-name]/src
-   ```
-3. Compile all Java files:
+- Java Development Kit (JDK) 11 or higher (the code uses `FileReader` and `PrintWriter` constructors that accept a charset, which were added in Java 11)
+
+### Using the command line
+
+1. Clone or download this repository.
+2. Open a terminal in the project folder.
+3. Compile all source files:
    ```bash
    javac *.java
    ```
-4. Run the application:
+4. Run the program:
    ```bash
    java Main
    ```
 
+### Using an IDE
+
+1. Open the project folder in your IDE.
+2. Make sure `Main.java`, `Product.java`, `Event.java`, `Order.java`, and `Profit.java` are in the same source folder.
+3. Run `Main.java`.
+
+### Basic usage flow
+
+1. Choose **1** to add your products.
+2. Choose **2** to view your products and check their prices, costs, and stock.
+3. Choose **3** to restock a product when its stock runs low.
+4. Choose **4** to schedule at least one selling event (required before orders can be placed).
+5. Choose **5** to view your scheduled selling events.
+6. Choose **6** to place customer pre-orders.
+7. Choose **7** to view all pre-orders and their pickup details.
+8. Choose **8** to view sales and profit.
+9. Choose **9** to exit.
 ---
 
 ### ┊ Sample Screenshots
