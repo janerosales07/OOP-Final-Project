@@ -6,11 +6,6 @@
 
 **IT - 2111** 
 
-*Martina Myles Micaella Delute*  
-*Princess Leiah Geneta*  
-*Lhian Roi Magadia*  
-*Jane Loraine Rosales*
-
 </div>
 
 ---
