@@ -277,12 +277,12 @@ public static void viewReport() {
     <td><b>Documentation</b><br>• [Contribution 1]<br>• [Contribution 2]</td>
   </tr>
   <tr>
-    <td><img src="https://github.com/lhianmagadia.png" width="80" alt="Lhian Roi B. Magadia"/></td>
+    <td><img src="members/lhianmagadia.png" width="80" alt="Lhian Roi B. Magadia"/></td>
     <td><b>Lhian Roi B. Magadia</b><br><a href="https://github.com/lhianmagadia">@lhianmagadia</a></td>
     <td><b>Design Programmer</b><br>• [Contribution 1]<br>• [Contribution 2]</td>
   </tr>
   <tr>
-    <td><img src="https://github.com/janerosales07.png" width="80" alt="Jane Loraine E. Rosales"/></td>
+    <td><img src="members/janerosales07.png" width="80" alt="Jane Loraine E. Rosales"/></td>
     <td><b>Jane Loraine E. Rosales</b><br><a href="https://github.com/janerosales07">@janerosales07</a></td>
     <td><b>Team Leader</b><br>• [Contribution 1]<br>• [Contribution 2]</td>
   </tr>
