@@ -44,12 +44,13 @@ Designed for student sellers and small campus entrepreneurs managing product inv
 ##  ┊ Repository & Project Structure
 
 ```text
-📂 [Project-Name]/
+📂 PopUp-and-Profit-Hub/
 ├── 📂 src/
 │   ├── Main.java
-│   ├── [Class1].java
-│   ├── [Class2].java
-│   └── ...
+│   ├── Product.java
+│   ├── Event.java
+│   └── Order.java
+|   └── Profit.java
 ├── 📂 docs/
 │   ├── Project-Proposal.pdf
 │   └── UML-Diagram.png
