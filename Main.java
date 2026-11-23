@@ -21,13 +21,13 @@ public class Main {
                 int number = Integer.parseInt(input);
 
                 if (number < min) {
-                    System.out.println("Invalid input. Minimum value is " + min + ".");
+                    System.out.println("\nInvalid input. Minimum value is " + min + ".");
                 } else {
                     return number;
                 }
 
             } catch (NumberFormatException e) {
-                System.out.println("Invalid input. Please enter a whole number.");
+                System.out.println("\nInvalid input. Please enter a whole number.");
             }
         }
     }
@@ -42,13 +42,13 @@ public class Main {
                 double number = Double.parseDouble(input);
 
                 if (!Double.isFinite(number) || number < min) {
-                    System.out.println("Invalid input. Please enter a value of " + min + " or higher.");
+                    System.out.println("\nInvalid input. Please enter a value of " + min + " or higher.");
                 } else {
                     return number;
                 }
 
             } catch (NumberFormatException e) {
-                System.out.println("Invalid input. Please enter a valid number.");
+                System.out.println("\nInvalid input. Please enter a valid number.");
             }
         }
     }
@@ -60,9 +60,9 @@ public class Main {
             String input = sc.nextLine().trim();
 
             if (input.isEmpty()) {
-                System.out.println("Invalid input. This field cannot be empty.");
+                System.out.println("\nInvalid input. This field cannot be empty.");
             } else if (input.contains("|")) {
-                System.out.println("Invalid input. Please do not use the | character.");
+                System.out.println("\n Invalid input. Please do not use the | character.");
             } else {
                 return input;
             }
@@ -78,7 +78,7 @@ public class Main {
                 LocalDate.parse(input);
                 return input;
             } catch (Exception e) {
-                System.out.println("Invalid date. Use YYYY-MM-DD.");
+                System.out.println("\nInvalid date. Use YYYY-MM-DD.");
             }
         }
     }
@@ -92,7 +92,7 @@ public class Main {
                 LocalTime.parse(input);
                 return input;
             } catch (Exception e) {
-                System.out.println("Invalid time. Use HH:MM (24-hour format).");
+                System.out.println("\nInvalid time. Use HH:MM (24-hour format).");
             }
         }
     }
@@ -127,7 +127,7 @@ public class Main {
         Product product = Product.getProduct(choice - 1);
 
         if (product == null) {
-            System.out.println("Invalid product selection.");
+            System.out.println("\nInvalid product selection.");
             return;
         }
 
@@ -166,7 +166,7 @@ public class Main {
 
         if (Event.events.isEmpty()) {
             System.out.println("\nPlease schedule a selling event first.");
-            System.out.println("Orders need a pickup schedule.");
+            System.out.println("\nOrders need a pickup schedule.");
             return;
         }
 
@@ -179,12 +179,12 @@ public class Main {
         Product product = Product.getProduct(productChoice - 1);
 
         if (product == null) {
-            System.out.println("Invalid product selection.");
+            System.out.println("\nInvalid product selection.");
             return;
         }
 
         if (product.stock <= 0) {
-            System.out.println("This product is out of stock.");
+            System.out.println("\nThis product is out of stock.");
             return;
         }
 
@@ -192,7 +192,7 @@ public class Main {
         int quantity = readInt("Quantity: ", 1);
 
         if (quantity > product.stock) {
-            System.out.println("Not enough stock available.");
+            System.out.println("\nNot enough stock available.");
             System.out.println("Available stock: " + product.stock);
             return;
         }
@@ -205,7 +205,7 @@ public class Main {
         Event event = Event.getEvent(eventChoice - 1);
 
         if (event == null) {
-            System.out.println("Invalid event selection.");
+            System.out.println("\nInvalid event selection.");
             return;
         }
 
@@ -271,11 +271,11 @@ public class Main {
 
                 case 9:
                     System.out.println("\nData saved successfully.");
-                    System.out.println("Thank you for using PopUp & Profit!");
+                    System.out.println("\nThank you for using PopUp & Profit!");
                     return;
 
                 default:
-                    System.out.println("Invalid option. Please choose from 1-9.");
+                    System.out.println("\nInvalid option. Please choose from 1-9.");
             }
         }
     }
@@ -290,7 +290,7 @@ public class Main {
         Event.loadEvents();
         Order.loadOrders();
 
-        System.out.println("Welcome to PopUp & Profit!");
+        System.out.println("\nWelcome to PopUp & Profit!");
 
         mainMenu();
     }
