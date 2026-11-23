@@ -269,21 +269,21 @@ public static void viewReport() {
   <tr>
     <td><img src="https://github.com/MiKakaela.png" width="80" alt="Martina Mykaela Myles Delute"/></td>
     <td><b>Martina Mykaela Myles Delute</b><br><a href="https://github.com/MiKakaela">@MiKakaela</a></td>
-    <td><b>Lead Programmer</b><br>• [Contribution 1]<br>• [Contribution 2]</td>
+    <td><b>Lead Programmer</b><br>• Developed the core Java codebase (Main, Event, Product, Order, and Profit), including inventory, pre-order, and profit logic<br>• Implemented .txt file persistence, input validation, and exception handling across the system</td>
   </tr>
   <tr>
     <td><img src="members/princessgeneta.jpeg" width="80" alt="Princess Leia R. Geneta"/></td>
     <td><b>Princess Leia R. Geneta</b><br><a href="https://github.com/princessgeneta">@princessgeneta</a></td>
-    <td><b>Documentation</b><br>• [Contribution 1]<br>• [Contribution 2]</td>
+    <td><b>Documentation</b><br>• Authored README.md sections on target users, main features, and technologies used<br>• Documented team roles and the OOP concepts demonstrated in the codebase</td>
   </tr>
   <tr>
     <td><img src="members/lhianmagadia.png" width="80" alt="Lhian Roi B. Magadia"/></td>
     <td><b>Lhian Roi B. Magadia</b><br><a href="https://github.com/lhianmagadia">@lhianmagadia</a></td>
-    <td><b>Design Programmer</b><br>• [Contribution 1]<br>• [Contribution 2]</td>
+    <td><b>Design Programmer</b><br>• Authored README.md setup and running instructions along with sample console screenshots<br>• Documented known system limitations, future improvements, and contributor credits</td>
   </tr>
   <tr>
     <td><img src="members/janerosales07.jpg" width="80" alt="Jane Loraine E. Rosales"/></td>
     <td><b>Jane Loraine E. Rosales</b><br><a href="https://github.com/janerosales07">@janerosales07</a></td>
-    <td><b>Team Leader</b><br>• [Contribution 1]<br>• [Contribution 2]</td>
+    <td><b>Team Leader</b><br>• Created and managed the GitHub repository, led project development, and authored the project title, description, problem statement, and objectives<br>• Refined and cleaned up the console interface layout, menus, and output formatting</td>
   </tr>
 </table>
