@@ -272,7 +272,7 @@ public static void viewReport() {
     <td><b>Lead Programmer</b><br>• [Contribution 1]<br>• [Contribution 2]</td>
   </tr>
   <tr>
-    <td><img src="https://github.com/princessgeneta.png" width="80" alt="Princess Leia R. Geneta"/></td>
+    <td><img src="members/princessgeneta.jpeg" width="80" alt="Princess Leia R. Geneta"/></td>
     <td><b>Princess Leia R. Geneta</b><br><a href="https://github.com/princessgeneta">@princessgeneta</a></td>
     <td><b>Documentation</b><br>• [Contribution 1]<br>• [Contribution 2]</td>
   </tr>
@@ -282,7 +282,7 @@ public static void viewReport() {
     <td><b>Design Programmer</b><br>• [Contribution 1]<br>• [Contribution 2]</td>
   </tr>
   <tr>
-    <td><img src="members/janerosales07.png" width="80" alt="Jane Loraine E. Rosales"/></td>
+    <td><img src="members/janerosales07.jpg" width="80" alt="Jane Loraine E. Rosales"/></td>
     <td><b>Jane Loraine E. Rosales</b><br><a href="https://github.com/janerosales07">@janerosales07</a></td>
     <td><b>Team Leader</b><br>• [Contribution 1]<br>• [Contribution 2]</td>
   </tr>
