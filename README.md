@@ -28,10 +28,10 @@ Designed for student sellers and small campus entrepreneurs managing product inv
 ---
 
 ## ┊ Main Features
-* 🔹 **Product & Inventory Management** — Add, view, and restock products with automatic stock updates saved to `products.txt`
-* 🔹 **Selling Event Scheduling** — Create and view pop-up selling events with date, time, and location details
-* 🔹 **Pre-Order & Profit Tracking** — Place and view pre-orders tied to pickup events, deduct stock, save to `orders.txt`, and view sales and profit reports
-* 🔹 **Input Validation & Exception Handling** — `Main.java` validates user inputs via `while` loops, `try-catch` blocks (`NumberFormatException` in `readInt` and `readDouble`, plus `Exception` in `readDate` and `readTime`), minimum value checks, non-empty and no-`|` text checks (`readText`), `LocalDate`/`LocalTime` parsing, and stock/selection checks in `placeOrderMenu` and `restockMenu`; `Event.java`, `Product.java`, and `Order.java` handle bounds checking (`getEvent`, `getProduct`), file existence checks, delimiter line-length checks, and `try-catch` blocks during file saving/loading, while `Profit.java` aggregates stored `Order` records directly without extra file I/O
+*  **Product & Inventory Management** — Add, view, and restock products with automatic stock updates saved to `products.txt`
+*  **Selling Event Scheduling** — Create and view pop-up selling events with date, time, and location details
+*  **Pre-Order & Profit Tracking** — Place and view pre-orders tied to pickup events, deduct stock, save to `orders.txt`, and view sales and profit reports
+*  **Input Validation & Exception Handling** — `Main.java` validates user inputs via `while` loops, `try-catch` blocks (`NumberFormatException` in `readInt` and `readDouble`, plus `Exception` in `readDate` and `readTime`), minimum value checks, non-empty and no-`|` text checks (`readText`), `LocalDate`/`LocalTime` parsing, and stock/selection checks in `placeOrderMenu` and `restockMenu`; `Event.java`, `Product.java`, and `Order.java` handle bounds checking (`getEvent`, `getProduct`), file existence checks, delimiter line-length checks, and `try-catch` blocks during file saving/loading, while `Profit.java` aggregates stored `Order` records directly without extra file I/O
 
 ## ┊ Technologies Used
 * **Language:** Java (JDK 8 or later)
