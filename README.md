@@ -22,7 +22,7 @@ PopUp & Profit is a Java-based Object-Oriented Programming (OOP) console applica
 Small-scale event vendors, campus pop-ups, and student micro-businesses often rely on manual pen-and-paper logs or scattered spreadsheets to record events, track available products, compute order totals, and calculate overall profit. This manual workflow frequently leads to calculation errors, lost order records, poor inventory visibility, and difficulty determining net earnings after an event concludes.
 
 ### Target Users
-[state here]
+Designed for student sellers and small campus entrepreneurs managing product inventory, selling event schedules, customer pre-orders, and basic sales/profit tracking.
 
 
 ### Project Objectives
@@ -32,33 +32,16 @@ Small-scale event vendors, campus pop-ups, and student micro-businesses often re
 
 ---
 
-## ┊ Project Description
-[Write a clear summary of your Java application—what it does, how users interact with it, and what makes it useful.]
-
-### Problem Being Addressed
-[Explain the specific real-world or practical problem your application solves.]
-
-### Target Users
-* **[User Group 1]:** [How they benefit from using this application]
-* **[User Group 2]:** [How they benefit from using this application]
-
-### Project Objectives
-1. [Objective 1 — e.g., Analyze a problem and design an object-oriented Java solution.]
-2. [Objective 2 — e.g., Implement core features with input validation and exception handling.]
-3. [Objective 3 — e.g., Apply encapsulation, inheritance, polymorphism, and abstraction effectively.]
-
----
-
 ## ┊ Main Features
-* 🔹 **[Feature 1 Name]** — [Short description of what this feature does]
-* 🔹 **[Feature 2 Name]** — [Short description of what this feature does]
-* 🔹 **[Feature 3 Name]** — [Short description of what this feature does]
-* 🔹 **Input Validation & Exception Handling** — [Describe how invalid user inputs and errors are handled]
+* 🔹 **Product & Inventory Management** — Add, view, and restock products with automatic stock updates saved to `products.txt`
+* 🔹 **Selling Event Scheduling** — Create and view pop-up selling events with date, time, and location details
+* 🔹 **Pre-Order & Profit Tracking** — Place and view pre-orders tied to pickup events, deduct stock, save to `orders.txt`, and view sales and profit reports
+* 🔹 **Input Validation & Exception Handling** — `Main.java` validates user inputs via `while` loops, `try-catch` blocks (`NumberFormatException` in `readInt` and `readDouble`, plus `Exception` in `readDate` and `readTime`), minimum value checks, non-empty and no-`|` text checks (`readText`), `LocalDate`/`LocalTime` parsing, and stock/selection checks in `placeOrderMenu` and `restockMenu`; `Event.java`, `Product.java`, and `Order.java` handle bounds checking (`getEvent`, `getProduct`), file existence checks, delimiter line-length checks, and `try-catch` blocks during file saving/loading, while `Profit.java` aggregates stored `Order` records directly without extra file I/O
 
 ## ┊ Technologies Used
 * **Language:** Java (JDK 8 or later)
-* **Data Structures:** [e.g., Arrays / ArrayLists / HashMaps]
-* **Documentation & Modeling:** Markdown, UML Class Diagram
+* **Data Structures:** `ArrayList` (`ArrayList<Event>`, `ArrayList<Product>`, `ArrayList<Order>`) and `String[]` arrays (for `|`-delimited file parsing)
+* **Documentation & Modeling:** UML Class Diagram
 * **Version Control:** Git & GitHub
 
 ---
@@ -90,51 +73,62 @@ Small-scale event vendors, campus pop-ups, and student micro-businesses often re
 ## ┊ OOP Concepts Demonstrated
 
 ### 1. Encapsulation
-[Explain which classes use `private` fields, constructors, and `public` getters/setters to protect and control access to object data.]
+None of the project classes (`Event`, `Product`, `Order`, `Main`, or `Profit`) currently declare `private` instance fields or `public` getter/setter methods. Instead, fields in `Event` (`name`, `date`, `time`, `location`), `Product` (`name`, `price`, `cost`, `stock`), and `Order` (`customer`, `productName`, `quantity`, `total`, `cost`, `eventName`, `eventDate`, `eventTime`, `eventLocation`) use default (package-private) access, are initialized via `public` constructors, and are read or updated directly across classes (such as `product.stock`, `o.total`, and `e.name`)
 
 ```java
-// Replace with a real snippet from your project
-private String [fieldName];
+// Actual fields and constructor from Product.java (default package-private access; no private fields or getters/setters yet)
+String name;
+double price;
+double cost;
+int stock;
 
-public String get[FieldName]() {
-    return [fieldName];
-}
-
-public void set[FieldName](String [fieldName]) {
-    this.[fieldName] = [fieldName];
+public Product(String name, double price, double cost, int stock) {
+    this.name = name;
+    this.price = price;
+    this.cost = cost;
+    this.stock = stock;
 }
 ```
 
 ### 2. Inheritance
-[Explain your parent-child class relationships and which shared attributes or methods are reused by subclasses.]
+There are currently no parent-child class relationships (`extends`) or subclasses in **PopUp & Profit Hub**; `Main`, `Event`, `Product`, `Order`, and `Profit` are standalone classes and do not reuse shared attributes or methods through subclass inheritance. Instead, classes interact directly (such as `Order` receiving an `Event` and `Product` during order creation, and `Profit` reading `Order.orders`).
 
 ```java
-// Replace with a real snippet from your project
-public class [ParentClass] {
-    protected String [sharedAttribute];
-}
-
-public class [ChildClass] extends [ParentClass] {
-    // Inherits sharedAttribute and adds specialized behavior
+// Actual codebase: Inheritance (extends) is not yet implemented.
+// Main, Event, Product, Order, and Profit are standalone classes without a parent/child hierarchy.
+public class Event {
+    String name;
+    String date;
+    String time;
+    String location;
 }
 ```
 
+---
+
 ### 3. Polymorphism
-[Explain how your program uses method overriding, dynamic method dispatch, or interface-based implementations.]
+Method overriding, dynamic method dispatch, and interface-based implementations are not currently used in **PopUp & Profit Hub** because the project classes (`Main`, `Event`, `Product`, `Order`, and `Profit`) do not use inheritance or interfaces, and rely on direct `static` and instance method calls instead.
 
 ```java
-// Replace with a real snippet from your project
-[ParentClass] obj = new [ChildClass]();
-obj.[overriddenMethod]();
+// Actual codebase: No method overriding, dynamic method dispatch, or interfaces are implemented.
+// Calls are made directly on classes and instances, such as in Profit.java:
+public static double getProfit() {
+    return getTotalSales() - getTotalCost();
+}
 ```
 
 ### 4. Abstraction
-[Explain how abstract classes and/or interfaces represent common behavior and hide implementation details.]
+`PopUp & Profit Hub` does not currently use `abstract` classes or `interface`s. Instead, behavioral abstraction is handled through concrete class methods that group multi-step operations behind a single method call—such as `Order.placeOrder(...)` handling stock deduction, saving `products.txt` and `orders.txt`, and printing the order summary, or `Profit.viewReport()` calculating and displaying sales, cost, and profit totals.
 
 ```java
-// Replace with a real snippet from your project
-public abstract class [AbstractClassName] {
-    public abstract void [abstractMethod]();
+// Actual codebase: No abstract classes or interfaces are defined.
+// Multi-step logic is grouped inside concrete methods, such as in Profit.java:
+public static void viewReport() {
+    System.out.println("\n===== SALES & PROFIT REPORT =====");
+    System.out.println("Total Orders: " + Order.orders.size());
+    System.out.printf("Total Sales: PHP %.2f%n", getTotalSales());
+    System.out.printf("Total Product Cost: PHP %.2f%n", getTotalCost());
+    System.out.printf("Total Profit: PHP %.2f%n", getProfit());
 }
 ```
 
@@ -205,18 +199,23 @@ Enter your choice:
     <th>Role & Contributions</th>
   </tr>
   <tr>
-    <td><img src="https://github.com/[USERNAME1].png" width="80" alt="[Member 1]"/></td>
-    <td><b>[Member 1 Full Name]</b><br><a href="https://github.com/[USERNAME1]">@[USERNAME1]</a></td>
-    <td><b>[Role — e.g., Project Leader / Lead Programmer]</b><br>• [Contribution 1]<br>• [Contribution 2]</td>
+    <td><img src="https://github.com/MiKakaela.png" width="80" alt="Martina Mykaela Myles Delute"/></td>
+    <td><b>Martina Mykaela Myles Delute</b><br><a href="https://github.com/MiKakaela">@MiKakaela</a></td>
+    <td><b>Lead Programmer</b><br>• [Contribution 1]<br>• [Contribution 2]</td>
   </tr>
   <tr>
-    <td><img src="https://github.com/[USERNAME2].png" width="80" alt="[Member 2]"/></td>
-    <td><b>[Member 2 Full Name]</b><br><a href="https://github.com/[USERNAME2]">@[USERNAME2]</a></td>
-    <td><b>[Role — e.g., Backend Developer]</b><br>• [Contribution 1]<br>• [Contribution 2]</td>
+    <td><img src="https://github.com/princessgeneta.png" width="80" alt="Princess Leia R. Geneta"/></td>
+    <td><b>Princess Leia R. Geneta</b><br><a href="https://github.com/princessgeneta">@princessgeneta</a></td>
+    <td><b>Documentation</b><br>• [Contribution 1]<br>• [Contribution 2]</td>
   </tr>
   <tr>
-    <td><img src="https://github.com/[USERNAME3].png" width="80" alt="[Member 3]"/></td>
-    <td><b>[Member 3 Full Name]</b><br><a href="https://github.com/[USERNAME3]">@[USERNAME3]</a></td>
-    <td><b>[Role — e.g., QA & Documentation Specialist]</b><br>• [Contribution 1]<br>• [Contribution 2]</td>
+    <td><img src="https://github.com/lhianmagadia.png" width="80" alt="Lhian Roi B. Magadia"/></td>
+    <td><b>Lhian Roi B. Magadia</b><br><a href="https://github.com/lhianmagadia">@lhianmagadia</a></td>
+    <td><b>Design Programmer</b><br>• [Contribution 1]<br>• [Contribution 2]</td>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/janerosales07.png" width="80" alt="Jane Loraine E. Rosales"/></td>
+    <td><b>Jane Loraine E. Rosales</b><br><a href="https://github.com/janerosales07">@janerosales07</a></td>
+    <td><b>Team Leader</b><br>• [Contribution 1]<br>• [Contribution 2]</td>
   </tr>
 </table>
