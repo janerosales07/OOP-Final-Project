@@ -1,1 +1,2 @@
 Jane|Brownies|5|175.0|100.0|Campus Sale|2026-12-02|12:00|School
+lhian|Brownies|20|700.0|400.0|Campus Sale|2026-12-02|12:00|School
