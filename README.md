@@ -59,10 +59,11 @@ Designed for student sellers and small campus entrepreneurs managing product inv
 └── README.md
 ```
 
-* **`Main.java`** — [Entry point of the program that initializes the system and handles the main loop.]
-* **`[Class1].java`** — [Brief description of this class's role in the system.]
-* **`[Class2].java`** — [Brief description of this class's role in the system.]
-
+* **`Main.java`** — Entry point of the program that loads saved data, validates user input, and handles the main menu loop for products, events, orders, and reports.
+* **`Product.java`** — Represents selling items (name, price, cost, stock) and manages product listing, restocking, and persistence in products.txt.
+* **`Event.java`** — Represents campus selling or pickup schedules (name, date, time, location) used when placing customer pre-orders.
+* **`Order.java`** — Represents customer pre-orders linked to a pickup event, deducts product stock upon ordering, and saves/loads order records in orders.txt.
+* **`Profit.java`** — Computes total sales, total product costs, and net profit from recorded orders, and displays the financial report.
 ---
 
 ## ┊ OOP Concepts Demonstrated
