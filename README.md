@@ -170,20 +170,60 @@ public static void viewReport() {
 ### ┊ Sample Screenshots
 
 ### Main Menu
-![Main Menu Screenshot](screenshots/main-menu.png)
+![Main Menu](screenshots/main-menu.png)
+*Welcome message and the 9-option main menu.*
 
-### Sample Output
-```text
-╔═══════════════════════════════════════╗
-║ ▓▓▓         [PROJECT TITLE]       ▓▓▓ ║
-╚═══════════════════════════════════════╝
-[1] [Menu Option 1]
-[2] [Menu Option 2]
-[3] Exit
+### 1. Add Product
+![Add Product](screenshots/add-product.png)
+*Entering the product name, selling price, cost, and initial stock.*
 
-Enter your choice:
-```
-*(Note: Replace the ASCII box above with a screenshot `![Sample Output](screenshots/sample-output.png)` or paste your actual console output here.)*
+### 2. View Products
+![View Products](screenshots/view-products.png)
+*Product list showing price, cost, and current stock.*
+
+### 3. Restock Product
+![Restock Product](screenshots/restock-product.png)
+*Choosing a product, entering the quantity to add, and seeing the new stock.*
+
+### 4. Set Selling Event
+![Set Selling Event](screenshots/set-event.png)
+*Entering the event name, date, time, and location.*
+
+### 5. View Selling Events
+![View Selling Events](screenshots/view-events.png)
+*List of scheduled events.*
+
+### 6. Place Pre-order
+![Place Pre-order](screenshots/place-order.png)
+*Choosing a product, entering the customer name and quantity, and selecting a pickup event.*
+
+![Order Summary](screenshots/order-summary.png)
+*Order summary with total payment and pickup details.*
+
+### 7. View Pre-orders
+![View Pre-orders](screenshots/view-orders.png)
+*List of all pre-orders with customer, product, quantity, total, and pickup schedule.*
+
+### 8. View Sales & Profit
+![Sales and Profit Report](screenshots/profit-report.png)
+*Total orders, total sales, total product cost, and total profit.*
+
+### 9. Exit
+![Exit](screenshots/exit.png)
+*Exit message after choosing option 9.*
+
+### Input Validation and Error Messages
+![Invalid Input](screenshots/invalid-input.png)
+*Invalid number, empty text, or the `|` character being rejected.*
+
+![Invalid Date and Time](screenshots/invalid-date-time.png)
+*Wrong date format (`YYYY-MM-DD`) and wrong time format (`HH:MM`).*
+
+![Out of Stock](screenshots/out-of-stock.png)
+*"This product is out of stock" and "Not enough stock available" messages.*
+
+![No Products or Events](screenshots/no-products-events.png)
+*"Please add products first" and "Please schedule a selling event first" messages.*
 
 ---
 
