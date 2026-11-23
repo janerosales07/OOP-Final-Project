@@ -180,15 +180,35 @@ Enter your choice:
 ---
 
 ## ┊ Known Limitations
-* [Limitation 1 — e.g., Program data is stored in memory and resets when the application closes.]
-* [Limitation 2 — e.g., Runs strictly via a command-line interface (CLI).]
+
+- Console-only interface; there is no graphical user interface.
+- Products, events, and orders cannot be edited or deleted once created.
+- Orders cannot be cancelled, so stock cannot be returned after an order is placed.
+- Orders have no status (pending, paid, picked up), so the profit report counts every pre-order as a completed sale.
+- Orders store a copy of the product name, cost, and event details at the time of ordering, so they are not linked to the original product or event objects.
+- The `|` character cannot be used in text fields because it separates fields in the data files.
+- Lines in the data files that do not have the expected number of fields are skipped when loading.
+- Dates are validated for format only; past dates are still accepted.
+- Duplicate product names and duplicate events are allowed.
+- Money is stored as `double`, so prices may occasionally show floating-point artifacts (e.g., `PHP 49.99999`) in lists.
+- Single-user only, with no login or multi-user support.
+- Data is stored in local text files rather than a database.
+
 
 ## ┊ Future Improvements
-* [Improvement 1 — e.g., Add file handling or database persistence to save records permanently.]
-* [Improvement 2 — e.g., Develop a graphical user interface (GUI) using JavaFX or Swing.]
-* [Improvement 3 — e.g., Add user authentication and role-based access.]
 
----
+- Add edit and delete functions for products, events, and orders.
+- Add order status tracking (pending, paid, picked up, cancelled) and restore stock on cancellation.
+- Count only paid or picked-up orders in the profit report.
+- Add search and filter options for products and orders.
+- Add low-stock alerts.
+- Prevent past dates and duplicate entries.
+- Use `BigDecimal` for accurate money handling.
+- Export reports to CSV or PDF.
+- Build a graphical user interface (JavaFX or Swing).
+- Move storage to a database such as SQLite.
+- Add inheritance or interfaces (for example, different product types) to make the design more extensible.
+
 
 ## ┊ Team Members, Roles & Project Contributors
 
